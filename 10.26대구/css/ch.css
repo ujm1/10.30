@@ -1,0 +1,75 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+a { color: black; }
+
+
+
+.widthImg {
+    width: 80%; height: 200px;
+    border: 0px solid white;
+    margin: 0 auto;
+    background: url(../img/bg0.jpg);
+    background-size: 100% 100%;
+}
+.at0 {
+    width: 1000px; height: 500px;
+    border: 0px solid black;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.at0 div {
+    width: 24%;
+    border: 1px solid black;
+}
+.at0 .heightImg {
+    background: url(../img/img7.png)no-repeat ;
+    background-size: 100% 100%;
+}
+
+
+/* 그림과 글씨가 있는 부모태그 */
+.at0 div .img_text_Box {
+    position: relative;
+    top: 0; left: 0;
+
+    width: 100%; height: 240px;
+    overflow: hidden;
+}
+/* 부모 태그를 오버하면 자식태그 중 글씨만 올라옴 */
+.at0 div .img_text_Box:hover .imgText {
+    top: 80%;
+}
+
+/* 부모 태그를 오버하면 자식태그 중 그림이 커지게 */
+.at0 div .img_text_Box:hover p img {
+    transform: scale(1.2);
+}
+/* div 안에 있는 p태그 만들기 */
+.at0 div .img_text_Box p {
+    width: 100%; height: 100%;
+}
+/* div 안에 있는 p태그에 그림 넣기 */
+.at0 div .img_text_Box p img {
+    width: 100%; height: 100%;
+    transition: 0.5s;
+}
+.at0 div .img_text_Box:last-child {
+    margin-top: 18px;
+}
+/* 그림-설명글이 들어 있는 div */
+.at0 div .img_text_Box .imgText {
+    position: absolute;
+    top: 100%; left: 0;
+
+    width: 100%; height: 50px;
+    border: 0px solid red;
+    background: rgba(128, 0, 128, 0.412);
+    color: white;
+    line-height: 50px;
+    transition: 0.5s;
+}

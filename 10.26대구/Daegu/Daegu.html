@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대구</title>
+    <link rel="stylesheet" href="css/Daegu.css" />
+
+    <script
+      src="https://kit.fontawesome.com/661f00cb42.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- //js보다 jquery가 위에 있어야. 
+    제이쿼리는 명령어를 쉽게 사용할수 있도록 편집해 모아놓은 집합인 
+    자바스크립트의 라이브러리의 하나  -->
+    <script src="javascript/Daegu.js"></script>
+  </head>
+  <body>
+    <p class="title">대구입니다.</p>
+    <script>
+      function section_func(js) {
+        smallImg5.style.display = "none";
+        sec0.style.display = "none";
+        sec1.style.display = "none";
+        sec2.style.display = "none";
+        sec3.style.display = "none"; //효성
+        sec4.style.display = "none";
+        sec5.style.display = "none";
+        if (js == 0) {
+          sec0.style.display = "flex";
+          smallImg5.style.display = "flex";
+        } else if (js == 1) {
+          // 경제 : 지하철 동영상
+          sec1.style.display = "block";
+          sec1Mp4.style.display = "block";
+        } else if (js == 2) {
+          // 문화 :
+          sec2.style.display = "block";
+        } else if (js == 3) {
+          // 스포츠. 효성 :
+          sec3.style.display = "block";
+        } else if (js == 4) {
+          // 모임 :
+          sec4.style.display = "block";
+        } else if (js == 5) {
+          // 갤러리 :
+          sec5.style.display = "block";
+        }
+      }
+    </script>
+    <div class="wrap">
+      <nav>
+        <div onclick="section_func(0)">홈으로</div>
+        <div onclick="section_func(1)">경제</div>
+        <div onclick="section_func(2)">문화</div>
+        <div onclick="section_func(3)">스포츠</div>
+        <div onclick="section_func(4)">모임</div>
+        <div onclick="section_func(5)">갤러리</div>
+      </nav>
+
+      <section id="sec5">
+        <!-- 갤러리 메뉴 -->
+        <div class="sec5_title">갤러리 화면</div>
+        <ul class="sec5Box">
+          <li><div class="sec5Box_text">1</div></li>
+          <li><div class="sec5Box_text">2</div></li>
+          <li><div class="sec5Box_text">3</div></li>
+          <li><div class="sec5Box_text">4</div></li>
+          <li><div class="sec5Box_text">5</div></li>
+        </ul>
+      </section>
+
+      <section id="sec1">
+        <!-- 경제 메뉴 -->
+        <div class="sec1Bg bg" id="sec1Mp4">
+          <video muted controls loop>
+            <source src="video/vid.mp4" />
+          </video>
+          <p class="sec1Bg_skip" onclick="sec1Mp4.style.display='none'">skip</p>
+        </div>
+        <p>경제 화면으로 돌아왔어요</p>
+      </section>
+
+      <section id="sec2">
+        <!-- 문화 메뉴 -->
+        <div class="sec2_title">문화 화면</div>
+        <div class="sec2Big">
+          <ul class="Big_img5">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <ul class="btn">
+          <li class="Big_prev"><i class="fa-solid fa-chevron-left"></i></li>
+          <li class="Big_next"><i class="fa-solid fa-chevron-right"></i></li>
+        </ul>
+        <ul class="sec2Box1">
+          <li>
+            <div>한결같되</div>
+            <div>날로 새롭게</div>
+            <p>2001년부터 지금까지</p>
+            <p>꾸준하게 학습과 운동을</p>
+            <p>했어요...</p>
+            <p>
+              <a href="https://www.daegu.go.kr/index.do">자세히 알아보기</a>
+            </p>
+          </li>
+          <li>
+            <div class="sec2right"><img src="img/book1.png" /></div>
+            <div class="sec2right"><img src="img/book2.png" /></div>
+            <div class="sec2right"><img src="img/book3.png" /></div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="sec3">
+        <!-- 스포츠 메뉴. 효성 테스트 -->
+        <div class="sec3_title">스포츠 화면</div>
+        ㅇㅇㄹ
+
+        <div class="sec3_imgbox1">
+        
+          <div>
+            
+            <div class="sec3_img1">가1</div>
+            <div class="sec3_open1">
+                <p>가</p>
+                <p>나</p>
+                <p>다</p>
+            </div>
+            <div class="sec3_img2">가1</div>
+            <div class="sec3_open2">
+                <p>가</p>
+                <p>나</p>
+                <p>다</p>
+            </div>
+            <div class="sec3_img3">가1</div>
+            <div class="sec3_open3">
+                <p>가</p>
+                <p>나</p>
+                <p>다</p>
+            </div>
+            <div class="sec3_img4">가1</div>
+            <div class="sec3_open4">
+                <p>가</p>
+                <p>나</p>
+                <p>다</p>
+            </div>
+
+      </section>
+
+      <section id="sec4">
+        <!-- 모임 메뉴 -->
+        <div class="sec4_title">모임 화면</div>
+      </section>
+
+      <!-- 초기 화면에 보여지는 Section(.sec) -->
+      <section class="sec" id="sec0">
+        <div
+          class="box1"
+          onmouseover="bus.style.display='none' "
+          onmouseout="bus.style.display='block' "
+        >
+          <p>갤러리</p>
+          <div class="sleepBox box">
+            <div class="big">
+              <ul class="img5">
+                <li><div>글자-1</div></li>
+                <li><div>글자-2</div></li>
+                <li><div>글자-3</div></li>
+                <li><div>글자-4</div></li>
+
+                <li><div>글자-5</div></li>
+                <li><div>글자-1</div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="box2" id="box2">
+          <p>교통안내</p>
+          <div class="bus box" id="bus">
+            <div class="box2Title">
+              안전한 교통
+              <small>편리한 교통</small>
+            </div>
+
+            <div class="both">
+              <div>111</div>
+              <div>222</div>
+              <p class="one"></p>
+            </div>
+
+            <div class="box2Img5">
+              <ul>
+                <li>
+                  <img src="img/img1.png" alt="" />
+                </li>
+                <li>상품명 : 지도책</li>
+                <li>가격 : 5000원</li>
+                <li>사이즈 : 250x300</li>
+              </ul>
+              <ul>
+                <li>
+                  <img src="img/img2.png" alt="" />
+                </li>
+                <li>상품명 : 지도책</li>
+                <li>가격 : 5000원</li>
+                <li>사이즈 : 250x300</li>
+              </ul>
+              <ul>
+                <li>
+                  <img src="img/img3.png" alt="" />
+                </li>
+                <li>상품명 : 지도책</li>
+                <li>가격 : 5000원</li>
+                <li>사이즈 : 250x300</li>
+              </ul>
+              <ul>
+                <li>
+                  <img src="img/img4.png" alt="" />
+                </li>
+                <li>상품명 : 지도책</li>
+                <li>가격 : 5000원</li>
+                <li>사이즈 : 250x300</li>
+              </ul>
+              <ul>
+                <li>
+                  <img src="img/img5.png" alt="" />
+                </li>
+                <li>상품명 : 지도책</li>
+                <li>가격 : 5000원</li>
+                <li>사이즈 : 250x300</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- nav와 section과 형제 태그 -->
+      <ul class="smallImg5" id="smallImg5">
+        <li onclick="func('img1.png');"><img src="img/img1.png" alt="" /></li>
+        <li onclick="func('img2.png');"><img src="img/img2.png" alt="" /></li>
+        <li onclick="func('img3.png');"><img src="img/img3.png" alt="" /></li>
+        <li onclick="func('img4.png');"><img src="img/img4.png" alt="" /></li>
+        <li onclick="func('img5.png');"><img src="img/img5.png" alt="" /></li>
+      </ul>
+    </div>
+
+    <div id="full">
+      <p id="fullClose" onclick="full.style.display='none'">X</p>
+      <div class="fullImg">
+        <img src="img/img5.png" alt="" name="fullPic" />
+      </div>
+    </div>
+
+    <script>
+      function func(js) {
+        console.log(js);
+        full.style.display = "block";
+        fullPic.src = "img/" + js;
+      }
+    </script>
+  </body>
+</html>
